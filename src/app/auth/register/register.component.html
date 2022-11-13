@@ -1,0 +1,39 @@
+<form (submit)="onRegisterSubmit()" #myRegisterForm="ngForm">
+    <div class="login">
+        <h1 class="text-center">Register</h1>
+        <div class="emailPassword">
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email adress"
+                    [(ngModel)]="registerForm.email" #email = "ngModel" required="">
+            </div>
+            <div class="validation" *ngIf="email.invalid && (email.touched || email.dirty)">
+                Email field must be valid
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password"
+                    [(ngModel)]="registerForm.password" #password = "ngModel" required="">
+            </div>
+            <div class="validation" *ngIf="password.invalid && (password.touched || password.dirty)">
+                Password field must be valid
+            </div>
+            <div class="password">
+                <label for="Confirmpassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="Confirmpassword" placeholder="Confirm Password"
+                    [(ngModel)]="registerForm.confirmPassword" #confirmPassword = "ngModel" required="">
+                <div class="validation" *ngIf="confirmPassword.invalid && (confirmPassword.touched || confirmPassword.dirty)">
+                    Confirm Password field must be valid
+                </div>
+                <button type="submit" id="submit" [disabled]="myRegisterForm.form.invalid">
+                    <ng-container *ngIf="!isLoading()">
+                        Submit
+                    </ng-container>
+                    <ng-container *ngIf="isLoading()">
+                        Loading...
+                    </ng-container>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

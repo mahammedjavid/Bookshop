@@ -1,0 +1,28 @@
+li {
+    border: 1px solid gray;
+    text-align: center;
+    width: 300px;
+    height: 370px;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 10px;
+    position: relative;
+}
+li p{
+    padding: 5px 0;
+}
+li button{
+    padding: 2%;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    margin: 1%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 105px;
+}
+li button:active{
+    transform: scale(0.97);
+    transition: 0.7s;
+}

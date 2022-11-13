@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    background-color: darkgreen;
+    margin-bottom: 10px;
+    color: white;
+}
+a{
+    transition: 0.3s;
+    color: white;
+
+}
+a:hover{
+    color: rgb(173, 173, 154);
+}
+.right{
+    display: flex;
+    gap: 10px;
+}
+.left{
+    cursor: pointer;
+    padding: 0 2%;
+}
+.right p{
+    margin-right: 10px;
+    cursor: pointer;
+}
+

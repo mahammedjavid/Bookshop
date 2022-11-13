@@ -1,0 +1,16 @@
+<div class="title">
+    <h3>Your Cart</h3>
+</div>
+<div *ngIf="get().length===0">Nothing in the cart</div>
+<div *ngIf="get().length>0">
+    <div *ngFor="let book of get()">
+        <ul class="bookList">
+            <li>
+                <img [src]="book.image" alt="" width="150">
+                <p class="name">{{ book.name }}</p>
+                <p class="author">{{ book.author }}</p>
+                <p class="amount">{{ book.amount | currency : "INR" }}</p>
+            </li>
+        </ul>
+    </div>
+</div>

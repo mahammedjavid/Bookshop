@@ -1,0 +1,7 @@
+<div>
+    <ul class="bookList">
+        <ng-container *ngFor="let singleBook of books">
+            <app-book [book]="singleBook" ></app-book>                    <!--  (AddToCartemit)="AddToCart($event)"  Not listening-->
+        </ng-container>
+    </ul>
+</div>

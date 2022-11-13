@@ -1,0 +1,41 @@
+.text-center {
+    text-align: center;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 300px;
+    margin: auto;
+}
+
+.emailPassword {
+    padding: 5% 0;
+}
+
+.password {
+    padding: 3% 0;
+}
+
+#password,
+#email, #Confirmpassword {
+    width: 100%;
+    padding: 2%;
+    margin: 1% 0;
+    border: 1px solid grey;
+}
+
+#submit {
+    background-color: darkgreen;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    padding: 3%;
+    border: none;
+}
+.validation{
+    background-color: rgb(241, 166, 166);
+    color: red;
+    padding: 3px;
+}
